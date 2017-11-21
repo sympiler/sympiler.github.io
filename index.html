@@ -1,1 +1,246 @@
-Sympiler IS COMING SOON . . . 
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Sympiler</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="description" content="">
+    <meta name="author" content="Kazem Cheshmi">
+
+    <!-- Le styles -->
+    <link href="Sympiler_files/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    </style>
+
+    <!-- Font Awesome icons -->
+    <link href="Sympiler_files/font-awesome.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://halide-lang.org/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://halide-lang.org/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://halide-lang.org/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://halide-lang.org/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://halide-lang.org/assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link href="Sympiler_files/prettify.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" async="" src="Sympiler_files/ga.js"></script><script type="text/javascript" src="Sympiler_files/prettify.js"></script>
+    <link href="Sympiler_files/prettify-sunburst.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body onload="prettyPrint()">
+
+    <div id="dic_bubble" class="selection_bubble fontSize13 noSelect" style="z-index: 9999; border: 1px solid rgb(74, 174, 222); visibility: hidden;"></div><div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Sympiler</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#gettingstarted">Getting Started</a></li>
+          <!--    <li><a href="http://halide-lang.org/tutorials/tutorial_introduction.html">Tutorials</a></li> -->
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#resources">Resources</a></li>
+            <!--  <li class="divider-vertical"></li>
+              <li><a href="http://halide-lang.org/docs">Docs</a></li>
+              <li><a href="http://github.com/halide/Halide/issues">Bugs</a></li>
+              <li><a href="http://github.com/halide/Halide/wiki">Wiki</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="http://stackoverflow.com/questions/tagged/halide"><i class="fa fa-stack-overflow"></i>/#halide</a></li>
+              --><!--
+              <li class="divider-vertical"></li>
+              <li><a href="demo">Demo</a></li>
+              -->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/sympiler/sympiler"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1031;" src="Sympiler_files/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <header class="hero-unit">
+      <div class="container">
+        <h1 >Sympiler</h1>
+        <p </p>
+        <p style="font-family:courier;">a code generator for transforming sparse matrix codes</p>
+      </div>
+    </header>
+
+    <div class="container" data-spy="scroll" data-target=".nav-collapse" data-offset="15">
+      <section id="overview">
+        <div class="page-header">
+          <h1>Overview</h1>
+        </div>
+        <p>Sympiler is a code generator that generates specialized code for a given sparsity. The current version supports Cholesky factorization and 
+        triangular solve methods for single-thread architecture. </p>
+
+        <!-- TODO big idea: separate schedule -->
+
+      </section>
+
+      <section id="gettingstarted">
+        <div class="page-header">
+          <h1>Getting Started</h1>
+        </div>
+
+        <p> Sympiler can be compiled from source code using <a href="https://github.com/sympiler/sympiler/blob/master/README.md"> README </a> file provided in Sympiler repository. Since Sympiler is developed based on <a href="http://halide-lang.org/"> Halide</a> code  thus, the Halide tutorials are helpful to understand the Sympiler internals. The Sympiler internals are also explained in <a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703"> SC17 paper </a> and <a href="Sympiler_files/Sympiler_SC17_TALK.pdf"> presentation </a>. </p>
+
+       
+
+        <!-- TODO explain main data types, usage -->
+        <!-- TODO explain, show JIT vs. static compilation -->
+
+<!--        <h2>Course Notes</h2>
+
+        <p>We taught a <a href="http://halide-lang.org/cvpr2015.html">course on Halide</a> at CVPR 2015. The course notes are a useful introduction to Halide.</p>
+
+        <p>Frédo Durand also taught an introduction to Halide in his <a href="https://stellar.mit.edu/S/course/6/sp15/6.815/index.html">6.815/6.865</a> computational photography course at MIT.</p>
+
+        <ul>
+            <li><a href="http://stellar.mit.edu/S/course/6/sp15/6.815/courseMaterial/topics/topic2/lectureNotes/14_Halide_print/14_Halide_print.pdf">Lecture 1</a></li>
+            <li><a href="http://stellar.mit.edu/S/course/6/sp15/6.815/courseMaterial/topics/topic2/lectureNotes/15_Halide2/15_Halide2.pdf">Lecture 2</a></li>
+            <li><a href="http://stellar.mit.edu/S/course/6/sp15/6.815/courseMaterial/topics/topic2/lectureNotes/16_Halide_3/16_Halide_3.pdf">Lecture 3</a></li>
+            <li><a href="http://stellar.mit.edu/S/course/6/sp15/6.815/courseMaterial/topics/topic2/lectureNotes/17_Halide4/17_Halide4.pdf">Lecture 4</a></li>
+        </ul>
+      </section> 
+-->
+
+      <section id="publications">
+        <div class="page-header">
+          <h1>Publications</h1>
+        </div>
+
+        <p>
+          These academic publications explains how symbolic information in sparse methods can be used for generating optimized code.
+          The current publications shows how decoupling symbolic analysis from numerical computation improves the performance of the Sympiler-generated code. The list will be updated as Sympiler is growing up.
+        </p>
+
+        <p>
+          <strong><a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703">Sympiler: Transforming Sparse Matrix Codes by Decoupling Symbolic Analysis</a></strong>
+          <br>
+          <a href="http://www.cheshmi.cc/">Kazem Cheshmi</a>,
+          <a href="http://people.csail.mit.edu/skamil/">Shoaib Kamil</a>,
+          <a href="http://cgi.cs.arizona.edu/~mstrout/">Michelle Mills Strout</a>,
+          <a href="http://www.rci.rutgers.edu/~mm2366/">Maryam Mehri Dehnavi</a>
+          <br>
+          <em>SC 2017.   <a href="Sympiler_files/Sympiler_SC17_TALK.pdf">Slides</a> </em>
+        </p>
+
+        <p>
+          <strong><a href="https://src.acm.org/binaries/content/assets/src/2016/kazemcheshmi.pdf">Decoupling Symbolic from Numeric in Sparse Matrix Computations</a></strong>
+          <br>
+          <a href="http://www.cheshmi.cc/">Kazem Cheshmi</a>,
+          <a href="http://www.rci.rutgers.edu/~mm2366/">Maryam Mehri Dehnavi</a>
+          <br>
+          <em>First place in <a href="https://src.acm.org/"> 2017 ACM SRC Grand Finals Winners</a></em>
+        </p>
+
+
+
+
+
+
+<!--        <p>
+          <strong><a href="http://people.csail.mit.edu/jrk/halide12">Decoupling Algorithms from Schedules for Easy Optimization of Image Processing Pipelines</a></strong>
+          <br>
+          <a href="http://people.csail.mit.edu/jrk">Jonathan Ragan-Kelley</a>,
+          <a href="http://people.csail.mit.edu/abadams">Andrew Adams</a>,
+          <a href="http://people.csail.mit.edu/sparis">Sylvain Paris</a>,
+          <a href="http://graphics.stanford.edu/%7Elevoy">Marc Levoy</a>,
+          <a href="http://people.csail.mit.edu/saman">Saman Amarasinghe</a>,
+          <a href="http://people.csail.mit.edu/fredo">Frédo Durand</a>.
+          <br>
+          <em>SIGGRAPH 2012</em>
+        </p>
+
+        <p>
+
+          <iframe src="http://www.youtube.com/embed/3uiEyEKji0M" allowfullscreen="" width="640" height="390" frameborder="0"></iframe>
+          <br>
+          This talk is a companion to the papers. It describes the
+          philosophy of Halide, and the ideas behind the scheduling
+          model.
+
+        </p>
+      </section>
+-->
+      <section id="resources">
+        <div class="page-header">
+          <h1>Resources</h1>
+        </div>
+        <dl>
+          <dt><i class="fa fa-github"></i> Development</dt>
+          <!--<dd><a href="http://halide-lang.org/tutorials/tutorial_introduction.html">tutorials</a></dd>
+          <dd><a href="http://halide-lang.org/docs">docs</a></dd>-->
+          <dd><a href="https://github.com/sympiler/sympiler/wiki">wiki</a></dd>
+          <dd><a href="https://github.com/sympiler/sympiler/issues">issues</a></dd>
+          <dd><a href="https://github.com/sympiler/sympiler">code</a></dd>
+
+         <!-- <dt><i class="fa fa-envelope"></i> Mailing Lists</dt>
+          <dd>
+            <a href="https://lists.csail.mit.edu/mailman/listinfo/halide-announce">halide-announce</a>
+            - announcement of releases and other news.
+          </dd>
+          <dd>
+            <a href="https://lists.csail.mit.edu/mailman/listinfo/halide-dev">halide-dev</a>
+            - technical discussion on the development and use of Halide. When in doubt, ask here for help.
+          </dd>
+
+          <dt><i class="fa fa-stack-overflow"></i> Stack Overflow</dt>
+          <dd>
+              <a href="http://stackoverflow.com/questions/tagged/halide">#halide</a>
+          </dd>
+-->
+          <dt><i class="fa fa-legal"></i> License</dt>
+          <dd>Sympiler is open source, under a <a href="https://github.com/sympiler/sympiler/blob/master/LICENSE.txt">commercially permissive MIT license</a>. We encourage you to use it in other projects, open source or commercial!</dd>
+        </dl>
+      </section>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Sympiler_files/jquery.html"></script>
+    <script src="Sympiler_files/bootstrap-transition.html"></script>
+    <script src="Sympiler_files/bootstrap-alert.html"></script>
+    <script src="Sympiler_files/bootstrap-modal.html"></script>
+    <script src="Sympiler_files/bootstrap-dropdown.html"></script>
+    <script src="Sympiler_files/bootstrap-scrollspy.html"></script>
+    <script src="Sympiler_files/bootstrap-tab.html"></script>
+    <script src="Sympiler_files/bootstrap-tooltip.html"></script>
+    <script src="Sympiler_files/bootstrap-popover.html"></script>
+    <script src="Sympiler_files/bootstrap-button.html"></script>
+    <script src="Sympiler_files/bootstrap-collapse.html"></script>
+    <script src="Sympiler_files/bootstrap-carousel.html"></script>
+    <script src="Sympiler_files/bootstrap-typeahead.html"></script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33707859-1']);
+      _gaq.push(['_setDomainName', 'halide-lang.org']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  
+
+</body></html>
