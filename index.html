@@ -81,8 +81,7 @@
         <div class="page-header">
           <h1>Overview</h1>
         </div>
-        <p>Sympiler is a code generator that generates specialized code for a given sparsity. The current version supports Cholesky factorization and 
-        triangular solve methods for single-thread architecture. The following figure shows how the input code to Sympiler is transformed internally to an optimized code. </p>
+        <p>Sympiler is a domain-specific code generator that optimizes sparse matrix computations by decoupling the symbolic analysis phase from the numerical manipulation stage in sparse codes. Sympiler then generates specialized code based on the symbolic information. The following figure shows how the input code to Sympiler is transformed internally to an optimized code. </p>
         <p></p>
         <img src="index_files/sympiler.png" alt="Sympiler" width="710" >
 
@@ -95,7 +94,7 @@
           <h1>Getting Started</h1>
         </div>
 
-        <p> Sympiler can be compiled from source code using <a href="https://github.com/sympiler/sympiler/blob/master/README.md"> README </a> file provided in Sympiler repository. Since Sympiler is developed based on <a href="http://halide-lang.org/"> Halide</a> code  thus, the Halide tutorials are helpful to understand the Sympiler internals. The Sympiler internals are also explained in <a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703"> SC17 paper </a> and <a href="index_files/Sympiler_SC17_TALK.pdf"> presentation </a>. </p>
+        <p> Sympiler can be compiled from source code using <a href="https://github.com/sympiler/sympiler/blob/master/README.md"> README </a> file provided in the Sympiler repository. Since Sympiler is developed based on <a href="http://halide-lang.org/"> Halide</a> code  thus, the Halide tutorials are helpful to understand the Sympiler internals. The Sympiler internals are also explained in <a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703"> SC17 paper </a> and <a href="index_files/Sympiler_SC17_TALK.pdf"> presentation </a>. </p>
 
        
 
@@ -123,8 +122,7 @@
         </div>
 
         <p>
-          These academic publications explains how symbolic information in sparse methods can be used for generating optimized code.
-          The current publications shows how decoupling symbolic analysis from numerical computation improves the performance of the Sympiler-generated code. The list will be updated as Sympiler is growing up.
+          These academic publications explain how symbolic information in sparse methods can guide the code generation phase   They also show how decoupling symbolic analysis from numerical manipulation stage simplifies the Sympiler-generated code and empowers Sympiler to select wiser optimization techniques at compile time. 
         </p>
 
         <p>
