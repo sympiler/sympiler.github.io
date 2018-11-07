@@ -66,16 +66,27 @@
     <a href="https://github.com/sympiler/sympiler"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1031;" src="index_files/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
     <!-- Main hero unit for a primary marketing message or call to action -->
- 
+    
+
 
     <div class="hero-unit" style="background-color:#959df3;">
 
       <div class="container" >
         <h1 >Sympiler</h1>
-        <p </p>
-        <p style="font-family:courier;">a code generator for transforming sparse matrix codes</p>
+        <p> </p>
+  
       </div>
+
+      <div class="container" >
+        <div class="typewriter">
+  <h1>a code generator for transforming sparse matrix codes </h1>
+</div>
+  
+      </div>
+
+      
     </div>
+
 
     <div class="container" data-spy="scroll" data-target=".nav-collapse" data-offset="15">
       <section id="overview">
@@ -262,17 +273,33 @@
   gtag('config', 'UA-42245837-3');
 </script>
 
-<script>
-var i = 0;
-var txt = 'Lorem ipsum typing effect!'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
+
+<style type="text/css" data-typed-js-css="true"> 
+.typewriter h1 {
+  font-family: courier; /* Web-safe typewriter-like font */
+  font-size: 1.4em;
+  font-weight: normal;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .06em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(50, end),
+    blinking-cursor .5s steps(40, end);
 }
-</script>
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+</style>
 </body></html>
