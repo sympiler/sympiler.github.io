@@ -1,0 +1,45 @@
+site_name: Sympiler Docs 
+theme:
+  name: material
+nav:
+  - Overview: 'index.md'
+  - Sympiler: 'sympiler.md'
+  - Getting Started with Sympiler: 'getting-started-sympiler.md'
+  - Sympiler Code Generator: 'sympiler-codegen.md'
+  - Sympiler Library: 'sympiler-lib.md'
+  - LBC DAG Partitioning: 'lbc.md'
+  - Python Interface (Sympyler): 'sympyler.md'
+
+site_author: Kazem Cheshmi
+copyright: © Copyright 2021 Kazem Cheshmi 
+google_analytics: ['UA-42245837-3', 'www.sympiler.com']
+repo_url: https://github.com/sympiler/sympiler
+repo_name: sympiler/sympiler
+site_dir: '../docs'
+plugins:
+    - search
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
