@@ -2,16 +2,17 @@ site_name: Sympiler Docs
 theme:
   name: material
 nav:
-  - Overview: 'index.md'
-  - Sympiler: 'sympiler.md'
+  - Sympiler Overview: 'index.md'
   - Getting Started with Sympiler: 'getting-started-sympiler.md'
-  - Sympiler Code Generator: 'sympiler-codegen.md'
+  - Iteration Pruning: 'prune.md'
+  - Iteration Tiling/Aggregation: 'tiling.md'
+  - Iteration Fusion: 'fusion.md'
+  - Vectorization: 'vect.md'
   - Sympiler Library: 'sympiler-lib.md'
-  - LBC DAG Partitioning: 'lbc.md'
-  - Python Interface (Sympyler): 'sympyler.md'
+  - Publications: 'citation.md'
 
 site_author: Kazem Cheshmi
-copyright: © Copyright 2021 Kazem Cheshmi 
+copyright: © Copyright 2022 Kazem Cheshmi 
 google_analytics: ['UA-42245837-3', 'www.sympiler.com']
 repo_url: https://github.com/sympiler/sympiler
 repo_name: sympiler/sympiler

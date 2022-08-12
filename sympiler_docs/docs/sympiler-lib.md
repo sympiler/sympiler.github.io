@@ -1,11 +1,13 @@
 The sympiler library is built from the sympiler generated code and has a collection of inspector/executor routines for wide range of sparse linear algebra kernels.
 
-##General inspector/executor scheme
 
-##Supported routines
-Here we explain both C++ and the eigen interfaces of the sympiler library.
+Here we explain C++ interfaces of the sympiler library.
 
-### LBC DAG partitioning:
+## DAG partitioning and scheduling
+
+
+## Sparse BLAS
+
 
 ### Sparse lower triangular solver (SpTRSV):
 
