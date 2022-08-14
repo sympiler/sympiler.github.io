@@ -8,7 +8,7 @@ nav:
   - Loop Tiling/Aggregation: 'tiling.md'
   - Loop Fusion: 'fusion.md'
   - Vectorization: 'vect.md'
-  - Sympiler Library: 'sympiler-lib.md'
+  - Sympiler Library (C++): 'sympiler-lib.md'
   - Benchmarks: 'benchmark.md'
   - Publications: 'citation.md'
 

@@ -15,7 +15,7 @@
     
     
       
-        <title>Sympiler Library - Sympiler Docs</title>
+        <title>Sympiler Library (C++) - Sympiler Docs</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sympiler Library
+              Sympiler Library (C++)
             
           </span>
         </div>
@@ -303,12 +303,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Sympiler Library
+          Sympiler Library (C++)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Sympiler Library
+        Sympiler Library (C++)
       </a>
       
         
@@ -356,13 +356,6 @@
           <li class="md-nav__item">
   <a href="#sparse-incomplete-cholesky-spic0" class="md-nav__link">
     Sparse incomplete Cholesky (SpIC0)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sparse-matrix-vector-multiplication-spmv" class="md-nav__link">
-    Sparse matrix-vector multiplication (SpMV)
   </a>
   
 </li>
@@ -511,13 +504,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sparse-matrix-vector-multiplication-spmv" class="md-nav__link">
-    Sparse matrix-vector multiplication (SpMV)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -582,10 +568,14 @@
 
 
 
-  <h1>Sympiler Library</h1>
+  <h1>Sympiler Library (C++)</h1>
 
-<p>The sympiler library is built from the sympiler generated code and has a collection of inspector/executor routines for wide range of sparse linear algebra kernels.</p>
-<p>Here we explain C++ interfaces of the sympiler library.</p>
+<p>The Sympiler library is built from the Sympiler-generated codes 
+and has a collection of inspector/executor routines for wide 
+range of sparse linear algebra kernels, we call them sparse 
+BLAS routines. Additionally, algorithms used in 
+Sympiler's inspectors, such as aggregation methods, can be independently used.
+Here we explain C++ interfaces of these routines.</p>
 <h2 id="sparse-blas">Sparse BLAS</h2>
 <h3 id="sparse-lower-triangular-solver-sptrsv">Sparse lower triangular solver (SpTRSV):</h3>
 <ul>
@@ -594,44 +584,147 @@
 solving linear system <span class="arithmatex"><span class="MathJax_Preview">Lx=b</span><script type="math/tex">Lx=b</script></span> where <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is a sparse lower triangular matrix and <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> and <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> are dense vectors.</p>
 </li>
 <li>
-<p>Inspector:
-inputs, outputs, description</p>
+<p>Inspector: Builds the inspection set for SpTRSV for a given matrix <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> in CSC format.
+<div class="highlight"><pre><span></span><code>int get_coarse_levelSet_DAG_CSC_tree(size_t n,
+    int *lC, /* column pointer for CSC  */
+    int *lR, /*  row indices for CSC */
+    int stype, /* 0 means general matrix, -1 means lower half, 1 means upper half */
+
+    int &amp;level_no, /* number of l- or s- partitions (coarsened wavefronts)
+    int *&amp;level_ptr, /* pointer to beginning of a coarsened wavefront */
+    int &amp;partNo, /* not needed*/
+    int *&amp;par_ptr, /* specifying the beginning of a w-partition in the partition array */
+    int *&amp;partition, /* array of iteration numbers */
+
+    int innerParts, /* number of threads */
+    int minLevelDist, /*tuning parameter, often an integer in range [-4,4]*/
+    int divRate, /* tuning parameter, often between [2,10] or a very large value like 4000 */
+    double *nodeCost /* cost of each iteration */
+    )
+</code></pre></div></p>
 </li>
 <li>
-<p>Executor:
-inputs, outputs, description</p>
+<p>Executor: given the inspection set from the inspector, SpTRSV is performed by calling:
+<div class="highlight"><pre><span></span><code>sptrsv_csr_lbc(
+    int n, /* matrix dimension */
+    int *Lp, /* row pointer for CSR or column pointer for CSC */
+    int *Li, /* column indices for CSR and row indices for CSC */
+    double *Lx, /* Matrix values */
+    double *x, /* As input has the values of $b$, and after execution has the solution $x$ */
+    int level_no, /* Inspector information */
+    int *level_ptr, 
+    int *par_ptr, 
+    int *partition
+    )
+</code></pre></div>
+If <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is stored in CSC format, then you should call <code>sptrsv_csc_lbc</code>. </p>
 </li>
 </ul>
 <h3 id="sparse-cholesky-factorization">Sparse Cholesky factorization</h3>
 <ul>
 <li>
-<p>Description: </p>
+<p>Description: decomposes a sparse symmetric positive definite matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> into <span class="arithmatex"><span class="MathJax_Preview">L L^T</span><script type="math/tex">L L^T</script></span>, 
+where <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is a sparse lower triangular matrix.</p>
 </li>
 <li>
-<p>Inspector:</p>
+<p>Inspector: Creates an object and stores symbolic information internally (see an example <a href="https://github.com/sympiler/sympiler-bench/blob/main/sym_interface/cholesky_demo.cpp">here</a>). 
+<div class="highlight"><pre><span></span><code> auto *sym_chol = new sym_lib::parsy::SolverSettings(H);
+ sym_chol-&gt;symbolic_analysis();
+</code></pre></div></p>
 </li>
 <li>
-<p>Executor:</p>
+<p>Executor: The computed factor is stored internally and can be used by calling <code>sym_chol-&gt;solve_only()</code>.
+<div class="highlight"><pre><span></span><code>sym_chol-&gt;numerical_factorization();
+</code></pre></div></p>
 </li>
 </ul>
 <h3 id="sparse-incomplete-lu-spilu0">Sparse incomplete LU (SpILU0)</h3>
+<ul>
+<li>
+<p>Description: approximately decomposes a sparse symmetric matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> into <span class="arithmatex"><span class="MathJax_Preview">L U</span><script type="math/tex">L U</script></span>, 
+where <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> and <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> are sparse lower and upper triangular matrices, respectively. Sparsity 
+pattern of <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> and <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> are the same lower and upper half of matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, respectively. </p>
+</li>
+<li>
+<p>Inspector: The <a href="#sparse-lower-triangular-solver-sptrsv">SpTRSV inspector</a> can be reused, the matrix type should be general for SpILU0. </p>
+</li>
+<li>
+<p>Executor: 
+<div class="highlight"><pre><span></span><code> void spilu0_csr_lbc(
+    int n, /* matrix dimension */
+    int nnz, /* number of nonzeros */
+    const int *Ap, /* row pointer for CSR or column pointer for CSC */
+    const int *Ai, /* column indices for CSR and row indices for CSC */
+    const double *Ax, /* Matrix values */
+    const int *A_diag, /* location of diagonal elements in each row/col */
+    double *l, /* the out factors stored as $L + U$ (Output)*/
+    int level_no, /* Inspector information */
+    const int *level_ptr,
+    const int *par_ptr, 
+    const int *partition,
+    int *tempvecs /* integer array with size n times number of threads */
+    )
+</code></pre></div></p>
+</li>
+</ul>
 <h3 id="sparse-incomplete-cholesky-spic0">Sparse incomplete Cholesky (SpIC0)</h3>
-<h3 id="sparse-matrix-vector-multiplication-spmv">Sparse matrix-vector multiplication (SpMV)</h3>
+<ul>
+<li>
+<p>Description: approximately decomposes a sparse symmetric positive definite matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> into <span class="arithmatex"><span class="MathJax_Preview">L L^T</span><script type="math/tex">L L^T</script></span>, 
+where <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is sparse lower triangular matrix, with the same sparsity pattern of the lower half of matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>. </p>
+</li>
+<li>
+<p>Inspector: The <a href="#sparse-lower-triangular-solver-sptrsv">SpTRSV inspector</a> can be reused.</p>
+</li>
+<li>
+<p>Executor: performs an in-place decomposition.
+<div class="highlight"><pre><span></span><code> void spic0_csr_lbc(
+    int n, /* matrix dimension */
+    int *Lp, /* row pointer for CSR or column pointer for CSC */
+    int *Li, /* column indices for CSR and row indices for CSC */
+    double *Lx, /* Matrix values (input/output) */
+    int level_no, /* Inspector information */
+    int *level_ptr,
+    int *par_ptr, 
+    int *partition,
+    )
+</code></pre></div></p>
+</li>
+</ul>
 <h2 id="tiling-and-aggregation">Tiling and Aggregation</h2>
 <h3 id="load-balanced-wavefront-coarsening">Load-balanced wavefront coarsening</h3>
 <ul>
-<li>Description</li>
-<li>Inputs</li>
-<li>outputs</li>
+<li>Description: creates a schedule by coarsening wavefronts of a DAG and then partition 
+each coarsened DAG to independent (disjoint) partitions. </li>
+<li>Usage: 
+<div class="highlight"><pre><span></span><code>int get_coarse_levelSet_DAG_CSC_tree(size_t n,
+    int *lC, /* column pointer for CSC  */
+    int *lR, /*  row indices for CSC */
+    int stype, /* 0 means general matrix, -1 means lower half, 1 means upper half */
+
+    int &amp;level_no, /* number of l- or s- partitions (coarsened wavefronts)
+    int *&amp;level_ptr, /* pointer to beginning of a coarsened wavefront */
+    int &amp;partNo, /* not needed*/
+    int *&amp;par_ptr, /* specifying the beginning of a w-partition in the partition array */
+    int *&amp;partition, /* array of iteration numbers */
+
+    int innerParts, /* number of threads */
+    int minLevelDist, /*tuning parameter, often an integer in range [-4,4]*/
+    int divRate, /* tuning parameter, often between [2,10] or a very large value like 4000 */
+    double *nodeCost /* cost of each iteration */
+    )
+</code></pre></div></li>
 </ul>
 <h3 id="hdagg">HDagg</h3>
 <ul>
-<li>Description</li>
-<li>Inputs</li>
-<li>outputs</li>
+<li>Description: creates a schedule by coarsening wavefronts of a DAG and then partition 
+each coarsened DAG to independent (disjoint) partitions. </li>
+<li>Usage: 
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></li>
 </ul>
 <h2 id="codelet-mining">Codelet mining</h2>
-<p>Coming soon.</p>
+<p>The details for using codelet mining, SpMV, and SpTRSV will come soon.</p>
 <h2 id="fusion">Fusion</h2>
 <p>Not public yet. </p>
 

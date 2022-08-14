@@ -4,7 +4,7 @@
 If you are using Sympiler or its components, please cite one of the following.
 
 ```
-@inproceedings{Cheshmi:2017:STS:3126908.3126936,
+@inproceedings{cheshmi2017sympiler,
  author = {Cheshmi, Kazem and Kamil, Shoaib and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
  title = {Sympiler: Transforming Sparse Matrix Codes by Decoupling Symbolic Analysis},
  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
@@ -53,7 +53,7 @@ If you want to compare with tiling techniques used in Sympiler, for LBC/ParSy pl
 For HDagg please cite:
 
 ```
-@INPROCEEDINGS{9820651,
+@INPROCEEDINGS{zarebavani2022hdagg,
   author={Zarebavani, Behrooz and Cheshmi, Kazem and Liu, Bangtian and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
   booktitle={2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
   title={HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations}, 
