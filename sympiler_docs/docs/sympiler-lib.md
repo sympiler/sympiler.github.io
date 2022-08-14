@@ -32,13 +32,21 @@ inputs, outputs, description
 
 ### Sparse incomplete Cholesky (SpIC0)
 
-### Sparse matrix scaling
-
-### Sparse matrix-vetor multiplication (SpMV)
+### Sparse matrix-vector multiplication (SpMV)
 
 
 
 ## Tiling and Aggregation
+
+### Load-balanced wavefront coarsening 
+* Description
+* Inputs
+* outputs
+
+### HDagg
+* Description
+* Inputs
+* outputs
 
 
 ## Codelet mining

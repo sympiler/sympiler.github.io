@@ -15,7 +15,7 @@
     
     
       
-        <title>Getting Started with Sympiler - Sympiler Docs</title>
+        <title>Loop Tiling/Aggregation - Sympiler Docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-sympiler" class="md-skip">
+        <a href="#aggregation" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started with Sympiler
+              Loop Tiling/Aggregation
             
           </span>
         </div>
@@ -218,102 +218,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Getting Started with Sympiler
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../getting-started-sympiler/" class="md-nav__link">
         Getting Started with Sympiler
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#building-sympiler" class="md-nav__link">
-    Building Sympiler
-  </a>
-  
-    <nav class="md-nav" aria-label="Building Sympiler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    Pre-requisites
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-dag-partitioners" class="md-nav__link">
-    Building DAG partitioners:
-  </a>
-  
-    <nav class="md-nav" aria-label="Building DAG partitioners:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pre-requisites_1" class="md-nav__link">
-    Pre-requisites
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation_1" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-sympiler" class="md-nav__link">
-    How to use sympiler?
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -339,11 +248,115 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../tiling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Loop Tiling/Aggregation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Loop Tiling/Aggregation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aggregation" class="md-nav__link">
+    Aggregation
+  </a>
+  
+    <nav class="md-nav" aria-label="Aggregation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformation-or-hierarchical-wavefront-transformation" class="md-nav__link">
+    Transformation (or Hierarchical wavefront transformation)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspectors" class="md-nav__link">
+    Inspectors
+  </a>
+  
+    <nav class="md-nav" aria-label="Inspectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-balance-level-coarsening-lbc" class="md-nav__link">
+    Load balance level coarsening (LBC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-iteration-dag-aggregation-hdagg" class="md-nav__link">
+    Hierarchical Iteration DAG Aggregation (HDagg)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-tiling" class="md-nav__link">
+    Block-tiling
+  </a>
+  
+    <nav class="md-nav" aria-label="Block-tiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformation" class="md-nav__link">
+    transformation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspector" class="md-nav__link">
+    inspector
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -448,24 +461,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-sympiler" class="md-nav__link">
-    Building Sympiler
+  <a href="#aggregation" class="md-nav__link">
+    Aggregation
   </a>
   
-    <nav class="md-nav" aria-label="Building Sympiler">
+    <nav class="md-nav" aria-label="Aggregation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    Pre-requisites
+  <a href="#transformation-or-hierarchical-wavefront-transformation" class="md-nav__link">
+    Transformation (or Hierarchical wavefront transformation)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#inspectors" class="md-nav__link">
+    Inspectors
   </a>
+  
+    <nav class="md-nav" aria-label="Inspectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-balance-level-coarsening-lbc" class="md-nav__link">
+    Load balance level coarsening (LBC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-iteration-dag-aggregation-hdagg" class="md-nav__link">
+    Hierarchical Iteration DAG Aggregation (HDagg)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -475,36 +508,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-dag-partitioners" class="md-nav__link">
-    Building DAG partitioners:
+  <a href="#block-tiling" class="md-nav__link">
+    Block-tiling
   </a>
   
-    <nav class="md-nav" aria-label="Building DAG partitioners:">
+    <nav class="md-nav" aria-label="Block-tiling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pre-requisites_1" class="md-nav__link">
-    Pre-requisites
+  <a href="#transformation" class="md-nav__link">
+    transformation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installation_1" class="md-nav__link">
-    Installation
+  <a href="#inspector" class="md-nav__link">
+    inspector
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-sympiler" class="md-nav__link">
-    How to use sympiler?
-  </a>
   
 </li>
       
@@ -520,59 +546,127 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/sympiler/sympiler/edit/master/docs/getting-started-sympiler.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/sympiler/sympiler/edit/master/docs/tiling.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Getting Started with Sympiler</h1>
+  <h1>Loop Tiling/Aggregation</h1>
 
-<p>We explain how you can build Sympiler and its iteration DAG partitioner from source. </p>
-<h2 id="building-sympiler">Building Sympiler</h2>
-<h3 id="pre-requisites">Pre-requisites</h3>
-<ul>
-<li>CMake</li>
-<li>C/C++ compiler (gcc, icc, or clang)</li>
-</ul>
-<p>Dependencies handled by CMake:</p>
-<ul>
-<li>OpenMP  : OpenMP is an optional dependency but without OpenMP, TBB is used internally.</li>
-<li>METIS : METIS dependency is already handled by CMake. </li>
-<li>a BLAS Library : (MKL or OpenBLAS) is required </li>
-</ul>
-<h3 id="installation">Installation</h3>
-<p>Please use the following:
-<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/sympiler/sympiler.git
-<span class="nb">cd</span> sympiler
-mkdir build
-<span class="nb">cd</span> build
-cmake  -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
-make
+<p>Sympiler aggregates iterations of loop to create balanced 
+thread-level parallelism and improve locality within a thread.
+In addition to iteration aggregation, Sympiler also uses block-tiling 
+for some sparse methods to enable locality and vectorization.</p>
+<h2 id="aggregation">Aggregation</h2>
+<p>Tiling is performed in Sympiler using a Hierarchical wavefront transformation with 
+an aggregation inspector. Sympiler has two aggregation inspector, LBC and HDagg.</p>
+<h3 id="transformation-or-hierarchical-wavefront-transformation">Transformation (or Hierarchical wavefront transformation)</h3>
+<p>The parallel tile transformation, also named as hierarchical wavefront(level), 
+tiles a specified loop to use the tiling information provided at runtime.
+The two code snippets below show before and after the parallel tiling 
+transformation. 
+The loop in line 2 of the code before transformation is changed
+to lines 2–5 in the parallel tiled code. After transformation,
+all operations and indices that use <code>I1</code>, which is the index of
+the transformed loop, will be replaced with a proper value
+from <code>HLevelSet</code>. The parallel <code>pragma</code> in line 2 ensures that
+all w-partitions within an l-partition run in parallel. Note that
+some algorithms may require <code>atomic</code> pragmas, as shown in line 9 
+of the parallel tiled code.</p>
+<div class="highlight"><pre><span></span><code>/// Input code (as an internal AST)
+Tile: for(I1){
+ .
+  .
+   .
+    for(In(I1)){
+Atomic: c /= a[idx(I1,...,In)]; 
+    }
+
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/// Tiled code after application of the parallel tiling transformation
+for( every l−partition i ) {
+ #pragma omp parallel for private (pVars)
+ for( every w−partition j ) {
+  for ( every v ∈ HLevelSet[i][j] ) {
+   I1 = v ;
+   . . .
+   for( In(I1) ) {
+   #pragma omp atomic
+    c /= a [ idx( I1, ... , In ) ] ; 
+
+   } 
+  } 
+ } 
+} 
+</code></pre></div>
+<h3 id="inspectors">Inspectors</h3>
+<p>There are two major aggregation algorithms implemented in Sympiler, Load-Balanced 
+wavefront(level) Coarsening (LBC) and Hierarchical Iteration DAG Aggregation (HDagg).</p>
+<h4 id="load-balance-level-coarsening-lbc">Load balance level coarsening (LBC)</h4>
+<p>The goal of Load-Balanced Level Coarsening is to find a
+set of l-partitions, and within each l-partition, to find a set
+of disjoint w-partitions with as balanced cost as possible. For
+improved performance, these partitions adhere to additional
+constraints to reduce synchronization between threads and
+maintain load balance. Additionally, there are objective functions 
+for minimizing communication between threads and the
+number of synchronizations between levels. The LBC is designed for 
+chordal DAGs (A DAG where each vertex is part of a cycle of at most length three) and trees.
+A detailed discussion of the algorithm is provided in the <a href="../citation/#parsy">ParSy paper</a>.</p>
+<h4 id="hierarchical-iteration-dag-aggregation-hdagg">Hierarchical Iteration DAG Aggregation (HDagg)</h4>
+<p>The HDagg algorithm statically partitions the DAG of a
+sparse matrix computation using a hybrid approach during 
+inspection. Its objective is to create a partitioning of a general
+DAG (DAGs that do not necessarily have a tree structure)
+that when executed provides a good load balance and low
+synchronization cost while improving locality. HDagg first
+groups vertices that form densely connected regions inside
+the DAG to ensure they execute on the same thread to
+improve locality. As a result, a grouped DAG is created where
+each vertex corresponds to a group of vertices. Then, to
+reduce synchronization costs and to improve load balance and
+locality, HDagg coarsens wavefronts of the grouped DAG.
+A detailed discussion of the algorithm is provided in the <a href="../citation/#hdagg">HDagg paper</a>.</p>
+<h2 id="block-tiling">Block-tiling</h2>
+<p>Sympiler's block-tiling strategy (also known as 2D Variable-Sized Blocking) converts
+ a sparse code to a set of non-uniform dense sub-
+kernels. In contrast to the conventional approach of blocking/tiling
+dense codes, where the input and computations are blocked into
+smaller uniform sub-kernels, the unstructured computations and 
+inputs in sparse kernels make blocking optimizations challenging. 
+This enables vectorization through calling 
+BLAS kernels. Block-tiling has a transformation and an inspector.</p>
+<h3 id="transformation">transformation</h3>
+<p>The block-tiling transformation is shown in the code below. 
+The inner loop in line 3 transforms to two nested
+loops (lines 3–7) that iterate over the block specified by the outer
+loop. The tile-blocking code transformation is domain specific and the 
+general H-Level transformation can not be used.<br />
+<div class="highlight"><pre><span></span><code>/// The input AST to the block-tiling transformation
+block-tile: for(I) {
+ for(J) {
+  B[idx1(I,J)] += a[idx2(I,J)];
+ }
+}
 </code></pre></div></p>
-<h2 id="building-dag-partitioners">Building DAG partitioners:</h2>
-<h3 id="pre-requisites_1">Pre-requisites</h3>
-<ul>
-<li>CMake</li>
-<li>C/C++ compiler (gcc, icc, or clang)</li>
-</ul>
-<p>Dependencies handled by CMake:</p>
-<ul>
-<li>METIS : METIS dependency is already handled by CMake. </li>
-</ul>
-<h3 id="installation_1">Installation</h3>
-<p>If the installation paths of these libraries are in the system path, CMake should be able to handle dependencies. If not, you should set CMake variables as shown below:
-<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/sympiler/sympiler.git
-<span class="nb">cd</span> sympiler
-mkdir build
-<span class="nb">cd</span> build
-cmake  -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
-make
-</code></pre></div></p>
-<h2 id="how-to-use-sympiler">How to use sympiler?</h2>
-<p>Sympiler can be used as a code generator or as a library.
-The DAG partitioning algorithm used inside sympiler can also be used independently. </p>
-<p>C++ API interface is <a href="../sympiler-lib/">here</a>.</p>
+<div class="highlight"><pre><span></span><code>/// The block-tiled code after transformation
+for(b &lt; blockSetSize) {
+ for(J1 &lt; blockSet[b].x) {
+  for(J2 &lt; blockSet [b].y) {
+   B[idx1(b,J1,J2)] += A[idx2(b, J1, J2)];
+  }
+ }
+}
+</code></pre></div>
+<h3 id="inspector">inspector</h3>
+<p>The symbolic inspector identifies sub-kernels with similar structure
+in the sparse matrix methods and the sparse inputs to provide the
+VS-Block stage with <em>blockable</em> sets that are not necessarily of the
+same size or consecutively located. These blocks are similar to the
+concept of supernodes (consecutive columns with the same pattern) in sparse libraries.
+Examples for the tile-blocking transformation are provided in the <a href="../citation/#sympiler">Sympiler paper</a>.</p>
 
               
             </article>
@@ -588,7 +682,7 @@ The DAG partitioning algorithm used inside sympiler can also be used independent
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Sympiler Overview" rel="prev">
+        <a href="../prune/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Iteration-space Pruning" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -597,20 +691,20 @@ The DAG partitioning algorithm used inside sympiler can also be used independent
               <span class="md-footer__direction">
                 Previous
               </span>
-              Sympiler Overview
+              Iteration-space Pruning
             </div>
           </div>
         </a>
       
       
         
-        <a href="../prune/" class="md-footer__link md-footer__link--next" aria-label="Next: Iteration-space Pruning" rel="next">
+        <a href="../fusion/" class="md-footer__link md-footer__link--next" aria-label="Next: Loop Fusion" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Iteration-space Pruning
+              Loop Fusion
             </div>
           </div>
           <div class="md-footer__button md-icon">
