@@ -6,7 +6,7 @@ If you are using Sympiler or its components, please cite one of the following.
 ```
 @inproceedings{Cheshmi:2017:STS:3126908.3126936,
  author = {Cheshmi, Kazem and Kamil, Shoaib and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
- title = {{Sympiler}: Transforming Sparse Matrix Codes by Decoupling Symbolic Analysis},
+ title = {Sympiler: Transforming Sparse Matrix Codes by Decoupling Symbolic Analysis},
  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
  series = {SC '17},
  year = {2017},
@@ -40,7 +40,7 @@ If you want to compare with tiling techniques used in Sympiler, for LBC/ParSy pl
 @INPROCEEDINGS{cheshmi2018parsy,
   author={Cheshmi, Kazem and Kamil, Shoaib and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
   booktitle={SC18: International Conference for High Performance Computing, Networking, Storage and Analysis}, 
-  title={{ParSy}: Inspection and Transformation of Sparse Matrix Computations for Parallelism}, 
+  title={ParSy: Inspection and Transformation of Sparse Matrix Computations for Parallelism}, 
   year={2018},
   pages={779-793},
   publisher = {IEEE Press},
@@ -56,7 +56,7 @@ For HDagg please cite:
 @INPROCEEDINGS{9820651,
   author={Zarebavani, Behrooz and Cheshmi, Kazem and Liu, Bangtian and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
   booktitle={2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
-  title={{HDagg}: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations}, 
+  title={HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations}, 
   year={2022},
   pages={1217-1227},
   doi={10.1109/IPDPS53621.2022.00121}}
