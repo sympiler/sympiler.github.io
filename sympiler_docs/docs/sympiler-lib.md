@@ -3,7 +3,7 @@ The sympiler library is built from the sympiler generated code and has a collect
 
 Here we explain C++ interfaces of the sympiler library.
 
-## DAG partitioning and scheduling
+
 
 
 ## Sparse BLAS
@@ -35,3 +35,20 @@ inputs, outputs, description
 ### Sparse matrix scaling
 
 ### Sparse matrix-vetor multiplication (SpMV)
+
+
+
+## Tiling and Aggregation
+
+
+## Codelet mining
+Coming soon.
+
+## Fusion
+Not public yet. 
+
+
+
+
+
+

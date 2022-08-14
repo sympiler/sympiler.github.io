@@ -1,18 +1,45 @@
 
-We explain how you can build Sympiler from source. We also provide details for how to build DAG partitioners and codelet mining algorithm standalone. 
+We explain how you can build Sympiler and its iteration DAG partitioner from source. 
 
-## Pre-requisites
+
+
+## Building Sympiler
+
+### Pre-requisites
 * CMake
-* C++ compiler (gcc, icc, or clang)
+* C/C++ compiler (gcc, icc, or clang)
 
 Dependencies handled by CMake:
 
-* OpenMP  : OpenMP is an optional dependency but without OpenMP, methods run sequentially.
+* OpenMP  : OpenMP is an optional dependency but without OpenMP, TBB is used internally.
 * METIS : METIS dependency is already handled by CMake. 
 * a BLAS Library : (MKL or OpenBLAS) is required 
 
 
-## Installation
+### Installation
+Please use the following:
+```bash
+git clone --recursive https://github.com/sympiler/sympiler.git
+cd sympiler
+mkdir build
+cd build
+cmake  -DCMAKE_BUILD_TYPE=Release ..
+make
+```
+
+
+
+## Building DAG partitioners:
+
+### Pre-requisites
+* CMake
+* C/C++ compiler (gcc, icc, or clang)
+
+Dependencies handled by CMake:
+
+* METIS : METIS dependency is already handled by CMake. 
+
+### Installation
 If the installation paths of these libraries are in the system path, CMake should be able to handle dependencies. If not, you should set CMake variables as shown below:
 ```bash
 git clone --recursive https://github.com/sympiler/sympiler.git
@@ -25,15 +52,12 @@ make
 
 
 
-## Getting started with DAG partitioners:
+
+## How to use sympiler?
+Sympiler can be used as a code generator or as a library.
+The DAG partitioning algorithm used inside sympiler can also be used independently. 
 
 
-
-
-
-## Sympiler APIs and interfaces
-
-
-C++ API and Eigen interface is [here](sympiler-lib.md).
+C++ API interface is [here](sympiler-lib.md).
 
 

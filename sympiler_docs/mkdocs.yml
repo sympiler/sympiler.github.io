@@ -4,11 +4,12 @@ theme:
 nav:
   - Sympiler Overview: 'index.md'
   - Getting Started with Sympiler: 'getting-started-sympiler.md'
-  - Iteration Pruning: 'prune.md'
-  - Iteration Tiling/Aggregation: 'tiling.md'
-  - Iteration Fusion: 'fusion.md'
+  - Iteration-space Pruning: 'prune.md'
+  - Loop Tiling/Aggregation: 'tiling.md'
+  - Loop Fusion: 'fusion.md'
   - Vectorization: 'vect.md'
   - Sympiler Library: 'sympiler-lib.md'
+  - Benchmarks: 'benchmark.md'
   - Publications: 'citation.md'
 
 site_author: Kazem Cheshmi

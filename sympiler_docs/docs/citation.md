@@ -1,5 +1,7 @@
 ## Citing us
-If you are using Sympiler or its components, please cite the Sympiler paper.
+
+### Sympiler
+If you are using Sympiler or its components, please cite one of the following.
 
 ```
 @inproceedings{Cheshmi:2017:STS:3126908.3126936,
@@ -21,30 +23,34 @@ If you are using Sympiler or its components, please cite the Sympiler paper.
 }
 ``` 
 
-
-If you want to compare with tiling techniques used in Sympiler, for LBC/ParSy please cite:
-
 ```
-@inproceedings{Cheshmi:2018:PIT:3291656.3291739,
- author = {Cheshmi, Kazem and Kamil, Shoaib and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
- title = {{ParSy}: Inspection and Transformation of Sparse Matrix Computations for Parallelism},
- booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis},
- series = {SC '18},
- year = {2018},
- location = {Dallas, Texas},
- pages = {62:1--62:15},
- articleno = {62},
- numpages = {15},
- url = {http://dl.acm.org/citation.cfm?id=3291656.3291739},
- acmid = {3291739},
- publisher = {IEEE Press},
- address = {Piscataway, NJ, USA},
-
+@phdthesis{cheshmi2022transforming,
+  title={Transforming Sparse Matrix Computations},
+  author={Cheshmi, Kazem},
+  publisher = {University of Toronto, Computer Science},
+  url = {http://hdl.handle.net/1807/123318},
+  year={2022}
 }
 ```
 
+### ParSy
+If you want to compare with tiling techniques used in Sympiler, for LBC/ParSy please cite:
 
- for HDagg please cite:
+```
+@INPROCEEDINGS{cheshmi2018parsy,
+  author={Cheshmi, Kazem and Kamil, Shoaib and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
+  booktitle={SC18: International Conference for High Performance Computing, Networking, Storage and Analysis}, 
+  title={{ParSy}: Inspection and Transformation of Sparse Matrix Computations for Parallelism}, 
+  year={2018},
+  pages={779-793},
+  publisher = {IEEE Press},
+  address = {Piscataway, NJ, USA},
+  url = {http://dl.acm.org/citation.cfm?id=3291656.3291739},
+  doi={10.1109/SC.2018.00065}}
+```
+
+### HDagg
+For HDagg please cite:
 
 ```
 @INPROCEEDINGS{9820651,
@@ -52,13 +58,11 @@ If you want to compare with tiling techniques used in Sympiler, for LBC/ParSy pl
   booktitle={2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
   title={{HDagg}: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations}, 
   year={2022},
-  volume={},
-  number={},
   pages={1217-1227},
   doi={10.1109/IPDPS53621.2022.00121}}
 ```
 
-
+### Partially Strided Codelet
  If you want to compare with vectorization techniques in Sympiler, please cite:
 
 ```
@@ -76,8 +80,9 @@ series = {SC ’22}
 ```
 
 
+### Sparse Fusion
 
- If you want to compare with fusion techniques in Sympiler, please cite:
+ If you want to compare with fusion techniques in Sympiler, please cite one of the following:
 
 ```
 @inproceedings{cheshmi22fusion,
@@ -98,6 +103,14 @@ series = {PPoPP '22}
 }
 ```
 
+```
+@article{cheshmi2021composing,
+  title={Composing Loop-carried Dependence with Other Loops},
+  author={Cheshmi, Kazem and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
+  journal={arXiv preprint arXiv:2111.12238},
+  year={2021}
+}
+```
 
 
 We are keen to hear your success stories with Sympiler. Please [contact us](mailto:cheshmik@mcmaster.ca).
