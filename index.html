@@ -93,7 +93,7 @@
         <div class="page-header">
           <h1>Overview</h1>
         </div>
-        <p>Sympiler is a domain-specific code generator that optimizes sparse matrix computations by decoupling the symbolic analysis phase from the numerical manipulation stage in sparse codes. Sympiler then generates specialized code based on the symbolic information. The following figure shows how the input code to Sympiler is transformed internally to an optimized code. </p>
+        <p>Sympiler is a domain-specific code generator that optimizes sparse matrix computations by decoupling the symbolic analysis phase from the numerical manipulation stage in sparse codes. Sympiler then generates specialized code or runtime schedule based on the symbolic information. The following figure shows how the input code to Sympiler is transformed internally to an optimized code. For more information, See  <a href="https://www.sympiler.com/docs/">Sympiler overview</a> </p>
         <p></p>
         <img src="index_files/sympiler.png" alt="Sympiler"  >
 
@@ -106,7 +106,7 @@
           <h1>Getting Started</h1>
         </div>
 
-        <p> Sympiler can be built from source code. Please look at the <a href="https://github.com/sympiler/sympiler/blob/master/README.md"> README </a> file in the Sympiler repository for configuration instructions. The details of the Sympiler internals are explained in the SC17 <a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703">paper </a> and <a href="index_files/Sympiler_SC17_TALK.pdf"> presentation</a>. </p>
+        <p> Sympiler can be built from source code. Please look at the <a href="https://www.sympiler.com/docs/getting-started-sympiler/"> Getting started with Sympiler </a> for configuration instructions. The details of the Sympiler internals are briefly explained in  <a href="https://www.sympiler.com/docs/#sympiler-internals">Sympiler docs </a>. </p>
 
 
 
@@ -136,65 +136,112 @@
           <h1>Publications</h1>
         </div>
 
-<!--         <p>
-          These academic publications explain how the symbolic information in sparse methods can guide the code generation phase in Sympiler.  
-        </p> -->
+
+
+
+        <p> 
+          <b> Vectorizing Sparse Matrix Computations with Partially-Strided Codelets </b> <br>
+          Kazem Cheshmi, Zachary Cetinic, and Maryam Mehri Dehnavi <br>
+          <em>International Conference for High Performance Computing, Networking, Storage and Analysis,  <b>SC'22 </b>
+          <br> 
+            <a href="index_files/psc.bib" target="_blank"> <u>BibTex</u></a> 
+           <a href="https://www.cs.toronto.edu/~mmehride/papers/PSC.pdf"> <img border="0" alt="PSC" src="index_files/pdf_icon.png" width="25" height="15">  </a>  </em>
+
+        </p>
+        <br>
+
+
+          
+
+        <p> 
+          <b> HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations </b> <br>
+          Behrooz Zarebavani, Kazem Cheshmi, Bangtian Liu, Michelle Mills Strout, and Maryam Mehri Dehnavi <br>
+          <em>IEEE International Parallel and Distributed Processing Symposium , <b>IPDPS'22 </b> 
+            <br>
+          <a href="https://ieeexplore.ieee.org/document/9820651">IEEE Xplore</a>
+            <a href="index_files/HDagg.bib" target="_blank"> <u>BibTex</u></a> 
+            <a href="index_files/IPDPS2022_HDagg"> <img border="0" alt="HDagg Talk" src="index_files/present_icon.svg" width="20" height="20">  </a> 
+           <a href="https://www.cs.toronto.edu/~mmehride/papers/HDag.pdf"> <img border="0" alt="HDagg" src="index_files/pdf_icon.png" width="25" height="15">  </a>  </em>
+        </p>
+        <br>
+
+
+        <p> 
+          <b> Transforming Sparse Matrix Computations </b> <br>
+          Kazem Cheshmi <br>
+          <em>University of Toronto, Computer Science, <b>PhD Thesis </b> 
+            <br>
+            <a href="index_files/sympilerthesis.bib" target="_blank"> <u>BibTex</u></a> 
+           <a href="https://www.cheshmi.cc/KazemCheshmi_files/PhDThesis_Sympiler_KazemCheshmi.pdf"> <img border="0" alt="Thesis Sympiler" src="index_files/pdf_icon.png" width="25" height="15">  </a>  </em>
+        </p>
+        <br>
+
+
 
         <p>
           <strong>NASOQ: Numerically Accurate Sparsity-Oriented QP Solver</strong>
           <br>
-          <a href="http://www.cheshmi.cc/">Kazem Cheshmi</a>,
-          <a href="http://dannykaufman.io/">Danny Kaufman</a>,
-          <a href="http://people.csail.mit.edu/skamil/">Shoaib Kamil</a>,
-          <a href="https://www.cs.toronto.edu/~mmehride/">Maryam Mehri Dehnavi</a>
+          Kazem Cheshmi,
+          Danny Kaufman,
+          Shoaib Kamil,
+          Maryam Mehri Dehnavi
           <br>
 
           <em>SIGGRAPH 2020. <a href="http://nasoq.github.io/"> NASOQ Webpage  </a> </em>   
         </p>
+        <br>
 
 
         <p>
           <strong>ParSy: Inspection and Transformation of Sparse Matrix Computations for Parallelism</strong>
           <br>
-          <a href="http://www.cheshmi.cc/">Kazem Cheshmi</a>,
-          <a href="http://people.csail.mit.edu/skamil/">Shoaib Kamil</a>,
-          <a href="http://cgi.cs.arizona.edu/~mstrout/">Michelle Mills Strout</a>,
-          <a href="https://www.cs.toronto.edu/~mmehride/">Maryam Mehri Dehnavi</a>
+          Kazem Cheshmi,
+          Shoaib Kamil,
+          Michelle Mills Strout,
+          Maryam Mehri Dehnavi
           <br>
-          <em>In Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis (SC '18). IEEE Press, Piscataway, NJ, USA, Article 62, 15 pages. <a href="http://dl.acm.org/citation.cfm?id=3291656.3291739">ACM DL</a>.
-            <a href="index_files/parsy.bib" target="_blank"> <u>BibTex</u></a> <a href="index_files/parsy.enw" target="_blank"> <u>EndNote</u></a>  <a href="index_files/parsy-ref.txt" target="_blank"><u> ACM Ref</u></a>. 
+          <em>International Conference for High Performance Computing, Networking, Storage, and Analysis (SC '18)
+          <br>
+           <a href="http://dl.acm.org/citation.cfm?id=3291656.3291739">ACM DL</a>
+            <a href="index_files/parsy.bib" target="_blank"> <u>BibTex</u></a> <a href="index_files/parsy.enw" target="_blank"> <u>EndNote</u></a>  <a href="index_files/parsy-ref.txt" target="_blank"><u> ACM Ref</u></a> 
             <a href="index_files/SC18-final.pdf"> <img border="0" alt="ParSy Talk" src="index_files/present_icon.svg" width="20" height="20">  </a> 
            <a href="https://www.cs.toronto.edu/~mmehride/papers/Parsy.pdf"> <img border="0" alt="ParSy SC" src="index_files/pdf_icon.png" width="25" height="15">  </a>  </em> 
+
         </p>
+        <br>
 
 
         <p>
           <strong>Sympiler: Transforming Sparse Matrix Codes by Decoupling Symbolic Analysis</strong>
           <br>
-          <a href="http://www.cheshmi.cc/">Kazem Cheshmi</a>,
-          <a href="http://people.csail.mit.edu/skamil/">Shoaib Kamil</a>,
-          <a href="http://cgi.cs.arizona.edu/~mstrout/">Michelle Mills Strout</a>,
-          <a href="https://www.cs.toronto.edu/~mmehride/">Maryam Mehri Dehnavi</a>
+          Kazem Cheshmi,
+          Shoaib Kamil,
+          Michelle Mills Strout,
+          Maryam Mehri Dehnavi
           <br>
-          <em>In Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC '17). ACM, New York, NY, USA, Article 13, 13 pages. <a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703">DOI: https://doi.org/10.1145/3126908.3126936</a>. <a href="index_files/sympiler.bib" target="_blank"> <u>BibTex</u></a> <a href="index_files/sympiler.enw" target="_blank"> <u>EndNote</u></a>  <a href="index_files/sympiler-ref.txt" target="_blank"><u> ACM Ref</u></a>. 
+          <em>International Conference for High Performance Computing, Networking, Storage and Analysis (SC '17)
+          <br>
+            <a href="https://dl.acm.org/citation.cfm?id=3126936&CFID=825768759&CFTOKEN=28284703">DOI: https://doi.org/10.1145/3126908.3126936</a>. <a href="index_files/sympiler.bib" target="_blank"> <u>BibTex</u></a> <a href="index_files/sympiler.enw" target="_blank"> <u>EndNote</u></a>  <a href="index_files/sympiler-ref.txt" target="_blank"><u> ACM Ref</u></a> 
             <a href="index_files/Sympiler_SC17_TALK.pdf"> <img border="0" alt="Slides" src="index_files/present_icon.png" width="20" height="20">  </a> 
            <a href="https://www.cs.toronto.edu/~mmehride/papers/SC17.pdf"> <img border="0" alt="PDF" src="index_files/pdf_icon.png" width="25" height="15">  </a>
           </em> 
         </p>
+        <br>
 
         <p>
           <strong>Decoupling Symbolic from Numeric in Sparse Matrix Computations</strong>
           <br>
-          <a href="http://www.cheshmi.cc/">Kazem Cheshmi</a>,
-          <a href="https://www.cs.toronto.edu/~mmehride/">Maryam Mehri Dehnavi</a>
+          Kazem Cheshmi,
+          Maryam Mehri Dehnavi
           <br>
           <em>First place in <a href="https://www.acm.org/media-center/2017/june/src-2017-grand-finals"> 2017 ACM SRC Grand Finals Winners</a> 
           <a href="index_files/SRC_CGO_Poster.pdf"> <img border="0" alt="Poster" src="index_files/present_icon.png" width="20" height="20">  </a> 
            <a href="https://src.acm.org/binaries/content/assets/src/2016/kazemcheshmi.pdf"> <img border="0" alt="PDF" src="index_files/pdf_icon.png" width="25" height="15">  </a></em>
         </p>
+        <br>
 
 
-
+        To know how to cite Sympiler in your work, please check <a href="https://www.sympiler.com/docs/citation/"> here</a> .
 
 
 
@@ -235,7 +282,7 @@
            
           <!--<dd><a href="http://halide-lang.org/tutorials/tutorial_introduction.html">tutorials</a></dd>
           <dd><a href="http://halide-lang.org/docs">docs</a></dd>-->
-          <dd><a href="https://github.com/sympiler/sympiler/wiki">wiki</a></dd>
+          <dd><a href="https://www.sympiler.com/docs/">docs</a></dd>
           <dd><a href="https://github.com/sympiler/sympiler/issues">issues</a></dd>
           <dd><a href="https://github.com/sympiler/sympiler">code</a></dd>
 

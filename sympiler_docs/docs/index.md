@@ -5,7 +5,7 @@ Sympiler is a domain-specific code generator and library that optimizes sparse m
 Sympiler addresses the challenge of irregular memory and indirect memory accesses in sparse computation through efficient use of compile-time and runtime information. Since compile-time analysis in these codes miss on several optimizations, Sympiler also organizes runtime information, particularly for when computation pattern will be reuse due to static sparsity pattern in an application.  
 
 
-## Overview
+## Sympiler Internals 
 Sympiler takes an input specification and generates an efficient parallel code using a set of compile-time transformation and also runtime inspection. We provide an overview of input and the Sympiler internals. 
 
 

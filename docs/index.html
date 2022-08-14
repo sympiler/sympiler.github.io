@@ -242,11 +242,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#sympiler-internals" class="md-nav__link">
+    Sympiler Internals
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+    <nav class="md-nav" aria-label="Sympiler Internals">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -435,11 +435,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#sympiler-internals" class="md-nav__link">
+    Sympiler Internals
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+    <nav class="md-nav" aria-label="Sympiler Internals">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -491,7 +491,7 @@
 <p>Sympiler is a domain-specific code generator and library that optimizes sparse matrix computations by decoupling the symbolic analysis phase from the numerical manipulation stage in sparse codes. Symbolic analysis refers to extracting information from location of nonzeros in a sparse matrix. Sympiler includes a set of compile-time and runtime techniques that we provide an overview in this part. </p>
 <h2 id="why-sympiler">Why Sympiler?</h2>
 <p>Sympiler addresses the challenge of irregular memory and indirect memory accesses in sparse computation through efficient use of compile-time and runtime information. Since compile-time analysis in these codes miss on several optimizations, Sympiler also organizes runtime information, particularly for when computation pattern will be reuse due to static sparsity pattern in an application.  </p>
-<h2 id="overview">Overview</h2>
+<h2 id="sympiler-internals">Sympiler Internals</h2>
 <p>Sympiler takes an input specification and generates an efficient parallel code using a set of compile-time transformation and also runtime inspection. We provide an overview of input and the Sympiler internals. </p>
 <h3 id="input-and-output">Input and Output</h3>
 <p>The input code to Sympiler specifies a set of sparse methods and their input matrix and vectors. 
