@@ -554,13 +554,13 @@
 
   <h1>Loop Tiling/Aggregation</h1>
 
-<p>Sympiler aggregates iterations of loop to create balanced 
+<p>Sympiler aggregates iterations of a loop to create balanced 
 thread-level parallelism and improve locality within a thread.
 In addition to iteration aggregation, Sympiler also uses block-tiling 
 for some sparse methods to enable locality and vectorization.</p>
 <h2 id="aggregation">Aggregation</h2>
 <p>Tiling is performed in Sympiler using a Hierarchical wavefront transformation with 
-an aggregation inspector. Sympiler has two aggregation inspector, LBC and HDagg.</p>
+an aggregation inspector. Sympiler has two aggregation inspectors, LBC and HDagg.</p>
 <h3 id="transformation-or-hierarchical-wavefront-transformation">Transformation (or Hierarchical wavefront transformation)</h3>
 <p>The parallel tile transformation, also named as hierarchical wavefront(level), 
 tiles a specified loop to use the tiling information provided at runtime.
@@ -606,7 +606,7 @@ for( every l−partition i ) {
 wavefront(level) Coarsening (LBC) and Hierarchical Iteration DAG Aggregation (HDagg).</p>
 <h4 id="load-balance-level-coarsening-lbc">Load balance level coarsening (LBC)</h4>
 <p>The goal of Load-Balanced Level Coarsening is to find a
-set of l-partitions, and within each l-partition, to find a set
+set of coarsened wavefronts ( or l-partitions), and within each coarsened wavefronts, to find a set
 of disjoint w-partitions with as balanced cost as possible. For
 improved performance, these partitions adhere to additional
 constraints to reduce synchronization between threads and
@@ -640,9 +640,9 @@ This enables vectorization through calling
 BLAS kernels. Block-tiling has a transformation and an inspector.</p>
 <h3 id="transformation">transformation</h3>
 <p>The block-tiling transformation is shown in the code below. 
-The inner loop in line 3 transforms to two nested
-loops (lines 3–7) that iterate over the block specified by the outer
-loop. The tile-blocking code transformation is domain specific and the 
+The inner loop in line 3 transforms into two nested
+loops (lines 3–7) that iterate over the block specified by the outermost
+loop. The tile-blocking code transformation is domain-specific and the 
 general H-Level transformation can not be used.<br />
 <div class="highlight"><pre><span></span><code>/// The input AST to the block-tiling transformation
 block-tile: for(I) {
@@ -661,7 +661,7 @@ for(b &lt; blockSetSize) {
 }
 </code></pre></div>
 <h3 id="inspector">inspector</h3>
-<p>The symbolic inspector identifies sub-kernels with similar structure
+<p>The symbolic inspector identifies sub-kernels with similar structures
 in the sparse matrix methods and the sparse inputs to provide the
 VS-Block stage with <em>blockable</em> sets that are not necessarily of the
 same size or consecutively located. These blocks are similar to the

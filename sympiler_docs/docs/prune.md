@@ -52,8 +52,8 @@ for(I1){
 
 ## Inspector 
 
-The VI-Prune inspector, the dependency graph of loop is
-traversed using depth first search (DFS) to determine the new pruned 
+In the VI-Prune inspector, the dependency graph of the loop is
+traversed using depth-first search (DFS) to determine the new pruned 
 iteration space, i.e. `pruneSet` and `pruneSetSize`. The dependence 
 graph computation can be either done with code analysis or using domain 
 information. Sympiler uses domain information, such as knowing the 

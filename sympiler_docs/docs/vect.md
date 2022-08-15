@@ -25,17 +25,16 @@ performing any sparse method with a handful of codelets.
 ## Transformation
 Sympiler transforms the code so the mined codelets at runtime 
 are mapped to the proper codelet type. 
-Each codelet type, PSC or BLAS, is implemented with a parameterized 
-vectorized routine that efficiently uses the SIMD instructions of the target
+Each codelet type, PSC or BLAS, is implemented with a parameterized vectorized routine that efficiently uses the SIMD instructions of the target
 architecture, i.e. x86. The parameterization also allows us to
 generate concise code invariant to the number of codelets that
 are mined for a set of operations. The parameterized vectorized
 routine takes the iteration space and access functions of a
 codelet and data spaces of the kernel as input and vectorizes
 all operations in the codelet. 
-The cpde below shows how a `switch-case` statement is used to 
+The code below shows how a `switch-case` statement is used to 
 map a mined codelet from `clist` to one of the three parametrized
-codes. The number of parameterized code per codelet types 
+codes. The number of parameterized codes per codelet type 
 can increase for better efficiency. 
 
 ```
@@ -69,7 +68,7 @@ that creates a list of codelets from access functions and the
 iteration space of a sparse kernel with the objective to
 minimize the overall cost of the final codelet list. The list is 
 computed at runtime and provided to the transformed code.  
-The codelet mining uses a locality-based mining (LCM) algorithm that mines
+Codelet mining uses a locality-based mining (LCM) algorithm that mines
 operations and finds an efficient codelet combination that satisfies 
 the correctness of the vectorized code and minimizes
 the total cost of codelets. The LCM algorithm has two steps;

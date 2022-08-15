@@ -15,7 +15,7 @@ such as MKL and Suitesparse for Cholesky factorization and sparse triangular sol
 ## HDagg benchmark 
 The HDagg benchmark is available from [here](https://github.com/BehroozZare/HDagg-benchmark) and compares prior DAG 
 partitioning or DAG scheduling methods with aggregation methods used 
-in Sympiler. All methods are tested for sparse triangular solver, Incomplete LU0, 
+in Sympiler. All methods are tested for the sparse triangular solver, Incomplete LU0, 
 and Incomplete Cholesky. A detailed comparison between aggregation algorithms and the 
-two aggregation algorithms in Sympiler are provided in the 
+two aggregation algorithms in Sympiler is provided in the 
 [HDagg paper](citation.md#hdagg).

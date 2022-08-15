@@ -1,5 +1,5 @@
 
-Sympiler aggregates iterations of loop to create balanced 
+Sympiler aggregates iterations of a loop to create balanced 
 thread-level parallelism and improve locality within a thread.
 In addition to iteration aggregation, Sympiler also uses block-tiling 
 for some sparse methods to enable locality and vectorization.
@@ -7,7 +7,7 @@ for some sparse methods to enable locality and vectorization.
 
 ## Aggregation 
 Tiling is performed in Sympiler using a Hierarchical wavefront transformation with 
-an aggregation inspector. Sympiler has two aggregation inspector, LBC and HDagg.
+an aggregation inspector. Sympiler has two aggregation inspectors, LBC and HDagg.
 
 
 ### Transformation (or Hierarchical wavefront transformation)
@@ -65,7 +65,7 @@ wavefront(level) Coarsening (LBC) and Hierarchical Iteration DAG Aggregation (HD
 
 #### Load balance level coarsening (LBC)
 The goal of Load-Balanced Level Coarsening is to find a
-set of l-partitions, and within each l-partition, to find a set
+set of coarsened wavefronts ( or l-partitions), and within each coarsened wavefronts, to find a set
 of disjoint w-partitions with as balanced cost as possible. For
 improved performance, these partitions adhere to additional
 constraints to reduce synchronization between threads and
@@ -108,9 +108,9 @@ BLAS kernels. Block-tiling has a transformation and an inspector.
 
 ### transformation 
 The block-tiling transformation is shown in the code below. 
-The inner loop in line 3 transforms to two nested
-loops (lines 3–7) that iterate over the block specified by the outer
-loop. The tile-blocking code transformation is domain specific and the 
+The inner loop in line 3 transforms into two nested
+loops (lines 3–7) that iterate over the block specified by the outermost
+loop. The tile-blocking code transformation is domain-specific and the 
 general H-Level transformation can not be used.  
 ```
 /// The input AST to the block-tiling transformation
@@ -134,7 +134,7 @@ for(b < blockSetSize) {
 ```
 
 ### inspector
-The symbolic inspector identifies sub-kernels with similar structure
+The symbolic inspector identifies sub-kernels with similar structures
 in the sparse matrix methods and the sparse inputs to provide the
 VS-Block stage with _blockable_ sets that are not necessarily of the
 same size or consecutively located. These blocks are similar to the
