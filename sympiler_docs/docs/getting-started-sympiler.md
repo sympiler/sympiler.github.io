@@ -8,6 +8,7 @@ We explain how you can build Sympiler and its iteration DAG partitioner from sou
 ### Pre-requisites
 * CMake
 * C/C++ compiler (gcc, icc, or clang)
+* Fortran compiler (for compiling lapack)
 
 Dependencies handled by CMake:
 
@@ -19,12 +20,10 @@ Dependencies handled by CMake:
 ### Installation
 Please use the following:
 ```bash
-git clone --recursive https://github.com/sympiler/sympiler.git
+git  clone --recursive https://github.com/sympiler/sympiler.git
 cd sympiler
-mkdir build
-cd build
-cmake  -DCMAKE_BUILD_TYPE=Release ..
-make
+cmake -DCMAKE_BUILD_TYPE=Release  -S . -B build
+cmake --build build --config Release -j 6 
 ```
 
 
@@ -42,12 +41,10 @@ Dependencies handled by CMake:
 ### Installation
 If the installation paths of these libraries are in the system path, CMake should be able to handle dependencies. If not, you should set CMake variables as shown below:
 ```bash
-git clone --recursive https://github.com/sympiler/sympiler.git
-cd sympiler
-mkdir build
-cd build
-cmake  -DCMAKE_BUILD_TYPE=Release ..
-make
+git clone https://github.com/sympiler/aggregation.git
+cd aggregation
+cmake -DCMAKE_BUILD_TYPE=Release  -S . -B build
+cmake --build build --config Release -j 6 
 ```
 
 

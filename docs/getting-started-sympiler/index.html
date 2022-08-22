@@ -534,6 +534,7 @@
 <ul>
 <li>CMake</li>
 <li>C/C++ compiler (gcc, icc, or clang)</li>
+<li>Fortran compiler (for compiling lapack)</li>
 </ul>
 <p>Dependencies handled by CMake:</p>
 <ul>
@@ -543,12 +544,10 @@
 </ul>
 <h3 id="installation">Installation</h3>
 <p>Please use the following:
-<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/sympiler/sympiler.git
+<div class="highlight"><pre><span></span><code>git  clone --recursive https://github.com/sympiler/sympiler.git
 <span class="nb">cd</span> sympiler
-mkdir build
-<span class="nb">cd</span> build
-cmake  -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
-make
+cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release  -S . -B build
+cmake --build build --config Release -j <span class="m">6</span> 
 </code></pre></div></p>
 <h2 id="building-dag-partitioners">Building DAG partitioners:</h2>
 <h3 id="pre-requisites_1">Pre-requisites</h3>
@@ -562,12 +561,10 @@ make
 </ul>
 <h3 id="installation_1">Installation</h3>
 <p>If the installation paths of these libraries are in the system path, CMake should be able to handle dependencies. If not, you should set CMake variables as shown below:
-<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/sympiler/sympiler.git
-<span class="nb">cd</span> sympiler
-mkdir build
-<span class="nb">cd</span> build
-cmake  -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
-make
+<div class="highlight"><pre><span></span><code>git clone https://github.com/sympiler/aggregation.git
+<span class="nb">cd</span> aggregation
+cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release  -S . -B build
+cmake --build build --config Release -j <span class="m">6</span> 
 </code></pre></div></p>
 <h2 id="how-to-use-sympiler">How to use sympiler?</h2>
 <p>Sympiler can be used as a code generator or as a library.
@@ -625,7 +622,7 @@ The DAG partitioning algorithm used inside sympiler can also be used independent
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © Copyright 2022 Kazem Cheshmi
+      © Copyright 2022
     </div>
   
   

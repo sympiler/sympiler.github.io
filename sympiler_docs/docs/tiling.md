@@ -1,6 +1,9 @@
 
 Sympiler aggregates iterations of a loop to create balanced 
-thread-level parallelism and improve locality within a thread.
+thread-level parallelism and improve locality within a thread. 
+A separate repository for aggregation is provided 
+[here](https://github.com/sympiler/aggregation.git) to enable using it 
+standalone. 
 In addition to iteration aggregation, Sympiler also uses block-tiling 
 for some sparse methods to enable locality and vectorization.
 

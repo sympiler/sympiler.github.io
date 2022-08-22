@@ -13,7 +13,7 @@ nav:
   - Publications: 'citation.md'
 
 site_author: Kazem Cheshmi
-copyright: © Copyright 2022 Kazem Cheshmi 
+copyright: © Copyright 2022 
 google_analytics: ['UA-42245837-3', 'www.sympiler.com']
 repo_url: https://github.com/sympiler/sympiler
 repo_name: sympiler/sympiler
