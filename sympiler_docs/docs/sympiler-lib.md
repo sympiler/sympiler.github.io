@@ -137,16 +137,6 @@ int get_coarse_levelSet_DAG_CSC_tree(size_t n,
 	)
 ```
 
-### HDagg
-* Description: creates a schedule by coarsening wavefronts of a DAG and then partition 
-each coarsened DAG to independent (disjoint) partitions. 
-* Usage: 
-```
-
-```
-
-## Codelet mining
-The details for using codelet mining, SpMV, and SpTRSV will come soon.
 
 ## Fusion
 Not public yet. 

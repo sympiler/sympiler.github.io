@@ -61,12 +61,8 @@ for( every l−partition i ) {
 ```
 
 
-### Inspectors
-There are two major aggregation algorithms implemented in Sympiler, Load-Balanced 
-wavefront(level) Coarsening (LBC) and Hierarchical Iteration DAG Aggregation (HDagg).
 
-
-#### Load balance level coarsening (LBC)
+### Load balance level coarsening (LBC) inspector
 The goal of Load-Balanced Level Coarsening is to find a
 set of coarsened wavefronts ( or l-partitions), and within each coarsened wavefronts, to find a set
 of disjoint w-partitions with as balanced cost as possible. For
@@ -77,23 +73,6 @@ for minimizing communication between threads and the
 number of synchronizations between levels. The LBC is designed for 
 chordal DAGs (A DAG where each vertex is part of a cycle of at most length three) and trees.
 A detailed discussion of the algorithm is provided in the [ParSy paper](citation.md#parsy).
-
-
-
-#### Hierarchical Iteration DAG Aggregation (HDagg)
-The HDagg algorithm statically partitions the DAG of a
-sparse matrix computation using a hybrid approach during 
-inspection. Its objective is to create a partitioning of a general
-DAG (DAGs that do not necessarily have a tree structure)
-that when executed provides a good load balance and low
-synchronization cost while improving locality. HDagg first
-groups vertices that form densely connected regions inside
-the DAG to ensure they execute on the same thread to
-improve locality. As a result, a grouped DAG is created where
-each vertex corresponds to a group of vertices. Then, to
-reduce synchronization costs and to improve load balance and
-locality, HDagg coarsens wavefronts of the grouped DAG.
-A detailed discussion of the algorithm is provided in the [HDagg paper](citation.md#hdagg).
 
 
 

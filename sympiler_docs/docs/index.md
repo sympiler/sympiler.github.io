@@ -59,7 +59,7 @@ described in this manner as well.
 </figure>
 
 
-The current transformations proposed and prototyped in Sympiler are [Iteration-space Prunning](prune.md), [Loop Tiling](tiling.md), [Loop Fusion](fusion.md), and [Vectorization](vect.md).
+The current transformations proposed and prototyped in Sympiler are [Iteration-space Prunning](prune.md), [Loop Tiling](tiling.md), and [Loop Fusion](fusion.md).
 
 
 

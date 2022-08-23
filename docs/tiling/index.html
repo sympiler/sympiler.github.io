@@ -295,29 +295,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#inspectors" class="md-nav__link">
-    Inspectors
+  <a href="#load-balance-level-coarsening-lbc-inspector" class="md-nav__link">
+    Load balance level coarsening (LBC) inspector
   </a>
-  
-    <nav class="md-nav" aria-label="Inspectors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#load-balance-level-coarsening-lbc" class="md-nav__link">
-    Load balance level coarsening (LBC)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hierarchical-iteration-dag-aggregation-hdagg" class="md-nav__link">
-    Hierarchical Iteration DAG Aggregation (HDagg)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -371,21 +351,6 @@
     <li class="md-nav__item">
       <a href="../fusion/" class="md-nav__link">
         Loop Fusion
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vect/" class="md-nav__link">
-        Vectorization
       </a>
     </li>
   
@@ -476,29 +441,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#inspectors" class="md-nav__link">
-    Inspectors
+  <a href="#load-balance-level-coarsening-lbc-inspector" class="md-nav__link">
+    Load balance level coarsening (LBC) inspector
   </a>
-  
-    <nav class="md-nav" aria-label="Inspectors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#load-balance-level-coarsening-lbc" class="md-nav__link">
-    Load balance level coarsening (LBC)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hierarchical-iteration-dag-aggregation-hdagg" class="md-nav__link">
-    Hierarchical Iteration DAG Aggregation (HDagg)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -604,10 +549,7 @@ for( every l−partition i ) {
  } 
 } 
 </code></pre></div>
-<h3 id="inspectors">Inspectors</h3>
-<p>There are two major aggregation algorithms implemented in Sympiler, Load-Balanced 
-wavefront(level) Coarsening (LBC) and Hierarchical Iteration DAG Aggregation (HDagg).</p>
-<h4 id="load-balance-level-coarsening-lbc">Load balance level coarsening (LBC)</h4>
+<h3 id="load-balance-level-coarsening-lbc-inspector">Load balance level coarsening (LBC) inspector</h3>
 <p>The goal of Load-Balanced Level Coarsening is to find a
 set of coarsened wavefronts ( or l-partitions), and within each coarsened wavefronts, to find a set
 of disjoint w-partitions with as balanced cost as possible. For
@@ -618,20 +560,6 @@ for minimizing communication between threads and the
 number of synchronizations between levels. The LBC is designed for 
 chordal DAGs (A DAG where each vertex is part of a cycle of at most length three) and trees.
 A detailed discussion of the algorithm is provided in the <a href="../citation/#parsy">ParSy paper</a>.</p>
-<h4 id="hierarchical-iteration-dag-aggregation-hdagg">Hierarchical Iteration DAG Aggregation (HDagg)</h4>
-<p>The HDagg algorithm statically partitions the DAG of a
-sparse matrix computation using a hybrid approach during 
-inspection. Its objective is to create a partitioning of a general
-DAG (DAGs that do not necessarily have a tree structure)
-that when executed provides a good load balance and low
-synchronization cost while improving locality. HDagg first
-groups vertices that form densely connected regions inside
-the DAG to ensure they execute on the same thread to
-improve locality. As a result, a grouped DAG is created where
-each vertex corresponds to a group of vertices. Then, to
-reduce synchronization costs and to improve load balance and
-locality, HDagg coarsens wavefronts of the grouped DAG.
-A detailed discussion of the algorithm is provided in the <a href="../citation/#hdagg">HDagg paper</a>.</p>
 <h2 id="block-tiling">Block-tiling</h2>
 <p>Sympiler's block-tiling strategy (also known as 2D Variable-Sized Blocking) converts
  a sparse code to a set of non-uniform dense sub-
@@ -722,7 +650,7 @@ Examples for the tile-blocking transformation are provided in the <a href="../ci
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © Copyright 2022
+      Sympiler Team © Copyright 2022
     </div>
   
   

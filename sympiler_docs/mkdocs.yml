@@ -7,13 +7,12 @@ nav:
   - Iteration-space Pruning: 'prune.md'
   - Loop Tiling/Aggregation: 'tiling.md'
   - Loop Fusion: 'fusion.md'
-  - Vectorization: 'vect.md'
   - Sympiler Library (C++): 'sympiler-lib.md'
   - Benchmarks: 'benchmark.md'
   - Publications: 'citation.md'
 
 site_author: Kazem Cheshmi
-copyright: © Copyright 2022 
+copyright: Sympiler Team © Copyright 2022 
 google_analytics: ['UA-42245837-3', 'www.sympiler.com']
 repo_url: https://github.com/sympiler/sympiler
 repo_name: sympiler/sympiler

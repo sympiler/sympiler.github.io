@@ -49,35 +49,6 @@ If you want to compare with tiling techniques used in Sympiler, for LBC/ParSy pl
   doi={10.1109/SC.2018.00065}}
 ```
 
-### HDagg
-For HDagg please cite:
-
-```
-@INPROCEEDINGS{zarebavani2022hdagg,
-  author={Zarebavani, Behrooz and Cheshmi, Kazem and Liu, Bangtian and Strout, Michelle Mills and Dehnavi, Maryam Mehri},
-  booktitle={2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)}, 
-  title={HDagg: Hybrid Aggregation of Loop-carried Dependence Iterations in Sparse Matrix Computations}, 
-  year={2022},
-  pages={1217-1227},
-  doi={10.1109/IPDPS53621.2022.00121}}
-```
-
-### Partially Strided Codelet
- If you want to compare with vectorization techniques in Sympiler, please cite:
-
-```
-@inproceedings{cheshmi22psc,
-author = {Cheshmi, Kazem and Cetenic, Zachary and Dehnavi, Maryam Mehri},
-title = {Vectorizing Sparse Matrix Computations with Partially-Strided Codelets},
-year = {2022},
-publisher = {IEEE Press},
-booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis},
-keywords = {matrix computations, domain-specific code generation, loop transformations, parallel algorithms},
-location = {Dallas, Texas},
-series = {SC ’22}
-}
-
-```
 
 
 ### Sparse Fusion
@@ -115,15 +86,3 @@ series = {PPoPP '22}
 
 We are keen to hear your success stories with Sympiler. Please [contact us](mailto:cheshmik@mcmaster.ca).
 
-## Credits
-The people have been involved in the development of Sympiler (so far):
-
-* Kazem Cheshmi
-
-* Behrooz Zarebavani 
-
-* Shoaib Kamil
-
-* Michelle Mills Strout
-
-* Maryam Mehri Dehnavi
