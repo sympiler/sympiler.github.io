@@ -7,6 +7,7 @@ nav:
   - Iteration-space Pruning: 'prune.md'
   - Loop Tiling/Aggregation: 'tiling.md'
   - Loop Fusion: 'fusion.md'
+  - Code Generation: 'codegen.md'
   - Sympiler Library (C++): 'sympiler-lib.md'
   - Benchmarks: 'benchmark.md'
   - Publications: 'citation.md'
@@ -45,4 +46,5 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
 

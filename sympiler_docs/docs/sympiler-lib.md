@@ -1,4 +1,4 @@
-The Sympiler library is built from the Sympiler-generated codes and has a collection of inspector/executor routines for a wide range of sparse linear algebra kernels. We call them sparse BLAS routines. Additionally, algorithms used in Sympiler's inspectors, such as aggregation methods, can be independently used. Here we explain the C++ interfaces of these routines.
+The Sympiler library is built from the Sympiler-generated codes and has a collection of inspector/executor routines for a wide range of sparse linear algebra kernels. We call them sparse BLAS routines. Additionally, algorithms used in Sympiler's inspectors, such as aggregation methods, can be independently used. Here we explain the C++ interfaces of these routines. This part does not discuss the sympiler code generation, for details about code generation, please see [here](codegen.md).
 
 
 

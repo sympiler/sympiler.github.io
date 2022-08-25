@@ -351,6 +351,21 @@
   
   
     <li class="md-nav__item">
+      <a href="codegen/" class="md-nav__link">
+        Code Generation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="sympiler-lib/" class="md-nav__link">
         Sympiler Library (C++)
       </a>
@@ -480,7 +495,8 @@
 <p>Sympiler takes an input specification and generates an efficient parallel code using a set of compile-time transformations and also runtime inspection. We provide an overview of input/output and the Sympiler internals. </p>
 <h3 id="input-and-output">Input and Output</h3>
 <p>The input code to Sympiler specifies one or a set of sparse methods and their input matrix and vectors. 
-Code implementing a sparse method is represented in a domain-specific abstract syntax tree (AST). Sympiler produces an efficient code for the method by applying a series of lowering phases to the AST. The generated code and a set of inspectors are used to perform the sparse method on a given matrix. </p>
+Code implementing a sparse method is represented in a domain-specific abstract syntax tree (AST). Sympiler produces an efficient code for the method by applying a series of lowering phases to the AST. The generated code and a set of inspectors are used to perform the sparse method on a given matrix. For more details on how the 
+final code is generated, please see <a href="codegen/">Code Generation</a></p>
 <h3 id="compile-time-inspector-guided-transformations">Compile-time inspector-guided transformations</h3>
 <p>The compile-time flow in Sympiler is shown in the figure below, 
 where a series of inspector-guided transformations are 

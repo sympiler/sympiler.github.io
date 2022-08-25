@@ -11,7 +11,8 @@ Sympiler takes an input specification and generates an efficient parallel code u
 
 ### Input and Output
 The input code to Sympiler specifies one or a set of sparse methods and their input matrix and vectors. 
-Code implementing a sparse method is represented in a domain-specific abstract syntax tree (AST). Sympiler produces an efficient code for the method by applying a series of lowering phases to the AST. The generated code and a set of inspectors are used to perform the sparse method on a given matrix. 
+Code implementing a sparse method is represented in a domain-specific abstract syntax tree (AST). Sympiler produces an efficient code for the method by applying a series of lowering phases to the AST. The generated code and a set of inspectors are used to perform the sparse method on a given matrix. For more details on how the 
+final code is generated, please see [Code Generation](codegen.md)
 
 
 ### Compile-time inspector-guided transformations
